@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+<style>
+:root{--bg:#f5f6fa;--fg:#222;--btn:#1e88e5;--btn-txt:#fff;--ok:#2e7d32;--radius:6px;--icon:#6b6b6b}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--fg);padding:16px;width:250px}
+h1{font-size:16px;font-weight:500;margin-bottom:12px}
+label{font-size:12px;display:block;margin-bottom:4px}
+
+/* inputs */
+input:not([type=checkbox]){
+  width:100%;padding:8px 34px 8px 10px;font-size:14px;
+  border:1px solid #ccc;border-radius:var(--radius);margin-bottom:12px
+}
+
+/* eye button --------------*/
+.pw-wrap{position:relative;margin-bottom:14px}
+.eye{
+  position:absolute;          
+  right:10px;                 
+  top:0; bottom:0; margin:auto;
+  width:14px; height:14px;
+  display:flex; align-items:center; justify-content:center;
+  background:none; border:none; padding:0; cursor:pointer;
+  color:var(--icon); z-index:1;
+}
+
+.eye svg{width:18px;height:18px;stroke:currentColor}  /* NEW: explicit stroke */
+/* ----------------------------------*/
+
+button{
+  width:100%;padding:10px;font-size:14px;font-weight:500;
+  background:var(--btn);color:var(--btn-txt);
+  border:none;border-radius:var(--radius);cursor:pointer;transition:opacity .2s
+}
+button:hover{opacity:.9}button:active{opacity:.8}
+
+#row{display:flex;align-items:center;margin:0 0 12px}
+#auto{margin-right:6px}
+#status{height:18px;text-align:center;font-size:12px;color:var(--ok)}
+.spinner{
+  width:16px;height:16px;border:2px solid var(--ok);border-top-color:transparent;
+  border-radius:50%;animation:spin 1s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+small{display:block;text-align:center;margin-top:6px;font-size:11px;color:#666}
+</style>
+</head>
+<body>
+<h1>Poly login</h1>
+
+<label>Code d'accès</label>
+<input id="code" type="text" autocomplete="off">
+
+<label>Mot de passe</label>
+<div class="pw-wrap">
+  <input id="nip" type="password" autocomplete="off">
+  <button class="eye" data-for="nip" aria-label="Afficher / masquer"></button>
+</div>
+
+<label>Date naissance (AAAAMMJJ)</label>
+<div class="pw-wrap">
+  <input id="dob" type="password" autocomplete="off">
+  <button class="eye" data-for="dob" aria-label="Afficher / masquer"></button>
+</div>
+
+<div id="row">
+  <input id="auto" type="checkbox" disabled checked>
+  <label for="auto" style="font-size:13px;cursor:pointer">Auto login</label>
+</div>
+
+<button id="save">Save</button>
+<div id="status"></div>
+<small>Credentials stay in this browser only</small>
+
+<script src="popup.js"></script>
+</body>
+</html>
