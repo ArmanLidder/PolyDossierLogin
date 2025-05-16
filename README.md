@@ -18,3 +18,8 @@ Chrome extension that fills and submits the Polytechnique Montréal student lo
 4. Turn on **Developer mode** (top right toggle).
 5. Click **Load unpacked**.
 6. Select the folder (or extract the zip and select that folder).
+
+Find the extension on the top bar and put your information:
+
+
+![image](https://github.com/user-attachments/assets/16192464-0801-469f-ad9f-dccef002019f)
