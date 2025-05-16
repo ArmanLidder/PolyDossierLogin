@@ -22,4 +22,5 @@ Chrome extension that fills and submits the Polytechnique Montréal student lo
 Find the extension on the top bar and put your information:
 
 
-![image](https://github.com/user-attachments/assets/16192464-0801-469f-ad9f-dccef002019f)
+![image](https://github.com/user-attachments/assets/d3e556ef-92bc-4121-bac7-a610da573717)
+
